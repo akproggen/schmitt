@@ -2,10 +2,13 @@ Pflichtenheft FitApp
 
 
 1. Zielbestimmung
+
 1.1 Ausgangssituation
 Im Rahmen des Moduls Pattern & Frameworks soll eine Anwendung entwickelt werden.
+
 1.2 Zielsetzung
 Es soll eine Desktop Anwendung entwickelt werden, die den Benutzern ermöglicht, ihre Fitnessdaten zu speichern und ihre tägliche Kalorienaufnahme aufzuzeichnen.
+
 1.3 Abgrenzung
 Was ist nicht Bestandteil?
 Keine Web-Version, keine mobile App

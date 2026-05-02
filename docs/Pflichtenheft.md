@@ -15,6 +15,7 @@ Keine Web-Version, keine mobile App
 2. Produkteinsatz
 2.1 Zielgruppe
 Die Hauptzielgruppe sind gesundheitsbewusste Menschen, die ihre Fitness und ihr Wohlbefinden verbessern möchten. Dazu gehören sowohl Hobbysportler als auch Personen, die einfach einen Überblick über ihre täglichen Gewohnheiten behalten wollen.
+
 2.2 Einsatzumgebung
 •	Betriebssystem(e): alle gängigen Desktopbetriebssysteme, die mit Java arbeiten können
 •	Hardwareanforderungen: keine, die über der auf den Rechnern eingesetzten Betriebssysteme liegt (z.B. Windows 11: CPU mit min. 2 Kernen und min. 1GHz Taktfrequenz, 4 GB Arbeitsspeicher)

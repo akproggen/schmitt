@@ -16,7 +16,6 @@ Die Hauptzielgruppe sind gesundheitsbewusste Menschen, die ihre Fitness und ihr 
 
 
 
-
 3. Produktfunktionen (Hauptfunktionen)
 
    /LF10/ Nutzerregistrierung und Anmeldung:

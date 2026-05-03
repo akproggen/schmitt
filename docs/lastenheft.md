@@ -18,13 +18,15 @@ Die Hauptzielgruppe sind gesundheitsbewusste Menschen, die ihre Fitness und ihr 
 
 3. Produktfunktionen (Hauptfunktionen)
 
-   /LF10/ Nutzerregistrierung und Anmeldung
-
-   /LF20/ Datenerfassung
+   /LF10/ Nutzerregistrierung und Anmeldung:
+  
+   /LF20/ Datenerfassung:
 
    /LF30/ Datenspeicherung und Datenschutz
+   Verschiedene Übungstypen: Kraft, Laufen, Calisthenics
 
    /LF40/ Datenvisualisierung
+   Plan mit mehreren Übungen und Zeitraum erstellen
 
    /LF50/ Benachrichtigungen
 
@@ -35,6 +37,7 @@ Die Hauptzielgruppe sind gesundheitsbewusste Menschen, die ihre Fitness und ihr 
    /LF80/ Trainingsaufzeichnung
 
    /LF90/ Datenexport
+   Benutzerdaten als PDF oder JSON exportieren
 
    /LF100/ Performance und Stabilität
 

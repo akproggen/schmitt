@@ -10,7 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import com.fitapp.model.UserDatabaseCSV;
+import com.fitapp.model.UserDatabaseSQLite;
+import com.fitapp.model.UserRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -44,7 +45,7 @@ public class LoginController implements Controller {
     @FXML
     private Label errorLabel;
 
-    private UserDatabaseCSV userDB = new UserDatabaseCSV();
+    private UserRepository userDB = new UserDatabaseSQLite();
 
     @FXML
     public void handleLogin(ActionEvent event) {

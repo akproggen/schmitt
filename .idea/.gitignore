@@ -3,3 +3,15 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+
+# Checkstyle
+checkstyle-cachefile
+checkstyle-result.xml

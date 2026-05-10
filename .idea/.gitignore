@@ -6,6 +6,8 @@
 
 
 # Maven
+
+.env
 target/
 
 # IDE

@@ -41,4 +41,32 @@ public class UserDatabaseSQLite implements UserRepository {
             return false;
         }
     }
+
+    // New User:
+    public void addUser(String username, String password) {
+        String sql = "INSERT INTO users (username, password) VALUES (? , ?)";
+        try (PreparedStatement stmt = DatabaseManager.getInstance().getConnection().prepareStatement(sql)) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.executeUpdate();
+            System.out.println("User added: " + username);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updatePassword(String username, String password) {
+        String sql = "UPDATE users SET password = ? WHERE username = ?";
+        try (PreparedStatement stmt = DatabaseManager.getInstance().getConnection().prepareStatement(sql)) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.executeUpdate();
+            System.out.println("Password updated for: " + password);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

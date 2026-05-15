@@ -3,12 +3,6 @@ import com.fitapp.navigation.Navigator;
 
 import com.fitapp.model.EmptyFieldException;
 import com.fitapp.model.InvalidCredentialsException;
-import java.io.IOException;
-
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 import com.fitapp.model.UserDatabaseSQLite;
 import com.fitapp.model.UserRepository;
@@ -66,6 +60,11 @@ public class LoginController implements Controller {
             errorLabel.setText("Login Failed");
             errorLabel.setVisible(true);
         }
+    }
+
+    @FXML
+    public void handleRegister() {
+        navigator.changeView("register.fxml");
     }
 
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fitapp.controller.RegisterController"
+      style="-fx-background-color: #1a1a2e; -fx-padding: 40;">
+
+    <Label text="FitApp 🏋️" style="-fx-font-size: 28; -fx-text-fill: #e94560; -fx-font-weight: bold;"/>
+    <Label text="Neuen Account erstellen" style="-fx-font-size: 14; -fx-text-fill: #aaaaaa;"/>
+
+    <VBox spacing="10" maxWidth="300">
+        <TextField fx:id="usernameField" promptText="Benutzername"
+                   style="-fx-background-color: #16213e; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-padding: 10; -fx-font-size: 14;"/>
+
+        <PasswordField fx:id="passwordField" promptText="Passwort"
+                       style="-fx-background-color: #16213e; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-padding: 10; -fx-font-size: 14;"/>
+
+        <PasswordField fx:id="confirmPasswordField" promptText="Passwort bestätigen"
+                       style="-fx-background-color: #16213e; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-padding: 10; -fx-font-size: 14;"/>
+
+        <Label fx:id="messageLabel" text="" wrapText="true" maxWidth="300"
+               style="-fx-font-size: 12; -fx-text-fill: #e94560;"/>
+
+        <Button fx:id="registerButton" text="Registrieren" onAction="#handleRegister" maxWidth="Infinity"
+                style="-fx-background-color: #e94560; -fx-text-fill: white; -fx-font-size: 14; -fx-padding: 10; -fx-cursor: hand; -fx-font-weight: bold;"/>
+
+        <Button text="← Zurück zum Login" onAction="#handleBack" maxWidth="Infinity"
+                style="-fx-background-color: transparent; -fx-text-fill: #aaaaaa; -fx-font-size: 12; -fx-cursor: hand; -fx-border-color: #444; -fx-padding: 8;"/>
+    </VBox>
+</VBox>

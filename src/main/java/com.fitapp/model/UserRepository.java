@@ -23,4 +23,5 @@ public interface UserRepository {
      */
     public void validateInput(String username, String password);
     public boolean validateUser(String username, String password);
+  //  void registerUser(String username, String password);
 }

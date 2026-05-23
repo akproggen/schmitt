@@ -69,4 +69,17 @@ public class UserDatabaseSQLite implements UserRepository {
             e.printStackTrace();
         }
     }
+
+   // @Override
+    public void registerUser(String username, String password) {
+        String sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        try (PreparedStatement stmt = DatabaseManager.getInstance()
+                .getConnection().prepareStatement(sql)) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

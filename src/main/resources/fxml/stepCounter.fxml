@@ -1,0 +1,40 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER"
+      spacing="10"
+      fx:controller="com.fitapp.controller.StepCounterController">
+
+    <Label text="Step Counter"/>
+
+    <TextField fx:id="stepsField" promptText="Enter steps"/>
+
+    <TextField fx:id="remainingField" editable="false"/>
+
+    <Label fx:id="stepOverflowLabel"
+           visible="false"
+           textFill="red"/>
+
+    <ProgressBar fx:id="progressBar" prefWidth="300"/>
+
+    <Label fx:id="progressLabel" text="0 %"/>
+
+    <!-- <Button text="Adds
+    <Button text="Reset" onAction="#handleVBox>-->
+
+        <Button text="Reset Calories"
+                maxWidth="Infinity"
+                style="-fx-font-size: 14px;"
+                onAction="#handleReset" />
+
+        <Button text="Back to Menu"
+                maxWidth="Infinity"
+                style="-fx-font-size: 14px;"
+                onAction="#handleBackToMenu" />
+
+</VBox>

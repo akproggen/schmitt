@@ -36,6 +36,8 @@ public class Navigator {
                 case "login.fxml" -> stage.setTitle("Login");
                 case "caloricIntake.fxml" -> stage.setTitle("Caloric Intake");
                 case "register.fxml" -> stage.setTitle("Registrieren");
+                case "stepCounterTest.fxml" -> stage.setTitle("Step Counter");
+                case "makeplan.fxml" -> stage.setTitle("Make Plan");
                 default -> stage.setTitle("App");
             }
 

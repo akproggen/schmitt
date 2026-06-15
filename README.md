@@ -10,7 +10,7 @@ A JavaFX-based fitness desktop application for tracking workouts, calories, and 
 - Statistics overview
 
 ## Tech Stack:
-- Java 17
+- Java 21
 - JavaFX 21
 - PostgreSQL (Neon Cloud)
 - Maven

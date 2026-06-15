@@ -30,6 +30,9 @@
         <Label text="Caloric Intake"
                style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
+        <TextField fx:id="goalField" promptText="Set daily calorie goal"/>
+        <Button text="Set Goal" onAction="#handleSetGoal"/>
+
         <TextField fx:id="caloriesField"
                    promptText="Calories Consumed"
                    maxWidth="Infinity" />

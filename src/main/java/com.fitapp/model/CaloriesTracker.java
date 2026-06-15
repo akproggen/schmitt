@@ -14,7 +14,8 @@ public class CaloriesTracker {
      *
      * Why do we use this:
      * Loose coupling: Observers are notified of state changes without needing to know anything about the subject
-     * This makes it easy to add, remove, or modify observers without affecting the subject
+     * This makes it easy to add, remove, or modify obs
+     * Ihre Statusmeldung wird in Chats und Kanälen angezeigt, wenn Personen Ihnen Nachrichten senden oder Sie @erwähnen.ervers without affecting the subject
      *
      * The observer pattern is highly flexible and can be used in a wide range of software applications.
      *

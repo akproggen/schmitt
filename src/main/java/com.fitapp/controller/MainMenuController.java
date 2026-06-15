@@ -1,27 +1,12 @@
+
 package com.fitapp.controller;
 
-import java.io.IOException;
-
 import com.fitapp.navigation.Navigator;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 
 public class MainMenuController implements Controller {
 
     private Navigator navigator;
-
-    // default constructor for FXML loading
-    public MainMenuController(){
-
-    }
 
     @Override
     public void setNavigator(Navigator navigator) {
@@ -34,12 +19,40 @@ public class MainMenuController implements Controller {
     }
 
     @FXML
-    private Button caloriesButton;
-
-    @FXML
-    public void handleCheckCalories(ActionEvent event){
+    public void handleCheckCalories() {
         changeView("caloricIntake.fxml");
     }
 
+    @FXML
+    public void handleAddExercise() {
+        System.out.println("Add Exercise clicked");
+    }
 
+    @FXML
+    public void handleMakePlan() {changeView("makeplan.fxml");
+    }
+
+    @FXML
+    public void handleViewStatistics() {
+        System.out.println("View Statistics clicked");
+    }
+
+    @FXML
+    public void handleStepCounter() {
+      System.out.println("Step Counter clicked");
+      changeView("stepCounterTest.fxml");
+    }
+
+/*
+    @FXML
+    public void handleStepCounter2() {
+
+
+        if (navigator == null) {
+            System.out.println("NAVIGATOR IST NULL!");
+        }
+
+        changeView("stepCounterTest.fxml");
+    }
+*/
 }

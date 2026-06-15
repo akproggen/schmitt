@@ -2,7 +2,6 @@ package com.fitapp.model;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

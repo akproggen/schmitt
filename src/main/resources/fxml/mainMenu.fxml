@@ -40,23 +40,30 @@
         <Button text="Add Exercise"
                 maxWidth="Infinity"
                 style="-fx-font-size: 14px;"/>
-<!--                onAction="#handleAddExercise" />-->
+        <!--                onAction="#handleAddExercise" />-->
 
         <Button text="Make Plan"
                 maxWidth="Infinity"
-                style="-fx-font-size: 14px;"/>
-<!--                onAction="#handleMakePlan" />-->
+                style="-fx-font-size: 14px;"
+                onAction="#handleMakePlan" />
 
         <Button text="View Statistics"
                 maxWidth="Infinity"
                 style="-fx-font-size: 14px;"/>
-<!--                onAction="#handleViewStatistics" />-->
+        <!--                onAction="#handleViewStatistics" />-->
 
         <Button text="Step Counter"
                 maxWidth="Infinity"
-                style="-fx-font-size: 14px;"/>
-<!--                onAction="#handleStepCounter" />-->
+                style="-fx-font-size: 14px;"
+                onAction="#handleStepCounter" />
 
+<!--Test StepCounter
+        <Button text="Step Counter Test"
+                fx:id="stepCounterTestButton"
+                maxWidth="Infinity"
+                style="-fx-font-size: 14px;"
+                onAction="#handleCheckCalories" />
+        -->
     </VBox>
 
 </StackPane>

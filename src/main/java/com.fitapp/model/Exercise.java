@@ -3,6 +3,7 @@ package com.fitapp.model;
 import java.util.Date;
 
 public abstract class Exercise {
+
     // attributes
     private int id;
     private String name;
@@ -13,8 +14,8 @@ public abstract class Exercise {
     private double calories;
 
     // constructor
-
-    public Exercise(int id, String name, String description, Date date, String difficulty, double duration, double calories){
+    public Exercise(int id, String name, String description, Date date,
+                    String difficulty, double duration, double calories) {
 
         this.id = id;
         this.name = name;
@@ -25,28 +26,27 @@ public abstract class Exercise {
         this.calories = calories;
     }
 
-    // getters and setters
+    // getters
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getDescription() { return description; }
+    public Date getDate() { return date; }
+    public String getDifficulty() { return difficulty; }
+    public double getDuration() { return duration; }
+    public double getCalories() { return calories; }
 
-    public int getId(){return id;}
-    public String getName(){return name;}
-    public String getDescription(){return description;}
-    public Date getDate(){return date;}
-    public String getDifficulty(){return difficulty;}
-    public double getDuration(){return duration;}
-    public double getCalories(){return calories;}
-
+    // setter
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
 
     // methods
-
-    public void save(){
+    public void save() {
         // to be implemented
     }
 
-    public double calcCalories(){
+    public double calcCalories() {
         // to be implemented
         return 0;
     }
-
-
-
 }

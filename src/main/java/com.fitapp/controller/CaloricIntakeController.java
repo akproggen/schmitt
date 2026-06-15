@@ -1,31 +1,17 @@
 package com.fitapp.controller;
 
 import com.fitapp.model.CaloriesTracker;
-import java.io.IOException;
 import com.fitapp.model.NegativeCaloriesException;
 import com.fitapp.model.CalorieLimitExceededException;
 import com.fitapp.navigation.Navigator;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 
 public class CaloricIntakeController implements Controller {
-    /**
-     * This controller class handles the functionalities for adding calories, resetting the caloric intake
-     * and enabling to get back to the main menu.
-     * */
 
     private Navigator navigator;
-
-    // default constructor for FXML loading
-    public CaloricIntakeController(){
-
-    }
 
     @Override
     public void setNavigator(Navigator navigator) {
@@ -37,9 +23,16 @@ public class CaloricIntakeController implements Controller {
         navigator.changeView(fxmlFile);
     }
 
+    // -------------------------
+    // MODEL
+    // -------------------------
+    private CaloriesTracker calTra;
 
-    // instantiating CaloriesTracker object with recommended calories for an average adult
-    private CaloriesTracker calTra = new CaloriesTracker(2000);
+    // -------------------------
+    // FXML FIELDS
+    // -------------------------
+    @FXML
+    private TextField goalField;
 
     @FXML
     private TextField caloriesField;
@@ -50,14 +43,51 @@ public class CaloricIntakeController implements Controller {
     @FXML
     private Label caloriesOverflowLabel;
 
+    // -------------------------
+    // SET GOAL (USER INPUT)
+    // -------------------------
+    @FXML
+    public void handleSetGoal(ActionEvent event) {
+        try {
+            int goal = Integer.parseInt(goalField.getText());
+
+            calTra = new CaloriesTracker(goal);
+
+            remainingField.textProperty().bind(
+                    calTra.remainingCaloriesProperty().asString()
+            );
+
+            caloriesOverflowLabel.setVisible(false);
+
+        } catch (NumberFormatException e) {
+            caloriesOverflowLabel.setText("Please enter a valid calorie goal.");
+            caloriesOverflowLabel.setVisible(true);
+        }
+    }
+
+    // -------------------------
+    // ADD CALORIES
+    // -------------------------
     @FXML
     public void handleAddingCalories() {
+
+        if (calTra == null) {
+            caloriesOverflowLabel.setText("Please set a calorie goal first.");
+            caloriesOverflowLabel.setVisible(true);
+            return;
+        }
+
         try {
             int calories = Integer.parseInt(caloriesField.getText());
+
             calTra.addCalories(calories);
-            // observer
-            remainingField.textProperty().bind(calTra.remainingCaloriesProperty().asString());
+
+            remainingField.textProperty().bind(
+                    calTra.remainingCaloriesProperty().asString()
+            );
+
             caloriesOverflowLabel.setVisible(false);
+
         } catch (NegativeCaloriesException e) {
             caloriesOverflowLabel.setText("Calories must be a positive number!");
             caloriesOverflowLabel.setVisible(true);
@@ -72,19 +102,25 @@ public class CaloricIntakeController implements Controller {
         }
     }
 
+    // -------------------------
+    // RESET
+    // -------------------------
     @FXML
     public void handleReset(ActionEvent event) {
-        calTra.reset();
-        // observer
-        remainingField.textProperty().bind(calTra.getDailyLimit().asString());
+
+        if (calTra != null) {
+            calTra.reset();
+        }
+
         caloriesField.setText("");
         caloriesOverflowLabel.setVisible(false);
     }
 
+    // -------------------------
+    // BACK
+    // -------------------------
     @FXML
-    public void handleBackToMenu(ActionEvent event){
+    public void handleBackToMenu(ActionEvent event) {
         changeView("mainMenu.fxml");
     }
-
-
 }
